@@ -19,8 +19,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    [self startStandardUpdates];
-    // Do any additional setup after loading the view, typically from a nib.
+    if ([CLLocationManager locationServicesEnabled]) {
+        [self startStandardUpdates];
+    }else {
+        
+    }
+        // Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning {
