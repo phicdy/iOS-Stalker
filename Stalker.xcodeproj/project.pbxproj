@@ -16,6 +16,7 @@
 		3CD83F461A4BDD2100FCCD32 /* StalkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD83F451A4BDD2100FCCD32 /* StalkerTests.m */; };
 		3CD83F501A4BE1B500FCCD32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD83F4F1A4BE1B500FCCD32 /* MapKit.framework */; };
 		3CD83F521A4BE25A00FCCD32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD83F511A4BE25A00FCCD32 /* CoreLocation.framework */; };
+		3CD83F571A4BF3FC00FCCD32 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD83F561A4BF3FC00FCCD32 /* MapViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,8 @@
 		3CD83F451A4BDD2100FCCD32 /* StalkerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StalkerTests.m; sourceTree = "<group>"; };
 		3CD83F4F1A4BE1B500FCCD32 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3CD83F511A4BE25A00FCCD32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		3CD83F551A4BF3FC00FCCD32 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		3CD83F561A4BF3FC00FCCD32 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +100,8 @@
 				3CD83F361A4BDD2100FCCD32 /* Images.xcassets */,
 				3CD83F381A4BDD2100FCCD32 /* LaunchScreen.xib */,
 				3CD83F291A4BDD2100FCCD32 /* Supporting Files */,
+				3CD83F551A4BF3FC00FCCD32 /* MapViewController.h */,
+				3CD83F561A4BF3FC00FCCD32 /* MapViewController.m */,
 			);
 			path = Stalker;
 			sourceTree = "<group>";
@@ -238,6 +243,7 @@
 				3CD83F321A4BDD2100FCCD32 /* ViewController.m in Sources */,
 				3CD83F2F1A4BDD2100FCCD32 /* AppDelegate.m in Sources */,
 				3CD83F2C1A4BDD2100FCCD32 /* main.m in Sources */,
+				3CD83F571A4BF3FC00FCCD32 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
