@@ -11,6 +11,7 @@
 
 @interface ViewController : UIViewController <CLLocationManagerDelegate>
 
+- (void)startStandardUpdates;
 
 @end
 
