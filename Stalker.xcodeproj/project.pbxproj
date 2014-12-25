@@ -177,6 +177,9 @@
 					3CD83F251A4BDD2100FCCD32 = {
 						CreatedOnToolsVersion = 6.1.1;
 						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
 							com.apple.Maps.iOS = {
 								enabled = 1;
 							};
