@@ -40,7 +40,7 @@
     _locationManager.delegate = self;
     _locationManager.desiredAccuracy = kCLDistanceFilterNone;
     // Set a movement threshold for new events.
-    _locationManager.distanceFilter = 10; // meters
+    _locationManager.distanceFilter = 1; // meters
     [_locationManager startUpdatingLocation];
 }
 
