@@ -37,6 +37,8 @@
     
     
     
+    NSDictionary *lastLocation = [locationList lastObject];
+    CLLocationCoordinate2D location = CLLocationCoordinate2DMake([lastLocation[@"lat"] floatValue], [lastLocation[@"lon"] floatValue]);
     [_mapView setCenterCoordinate:location animated:NO];
     
     // 縮尺を指定
