@@ -17,6 +17,7 @@
 		3CD83F501A4BE1B500FCCD32 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD83F4F1A4BE1B500FCCD32 /* MapKit.framework */; };
 		3CD83F521A4BE25A00FCCD32 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CD83F511A4BE25A00FCCD32 /* CoreLocation.framework */; };
 		3CD83F571A4BF3FC00FCCD32 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD83F561A4BF3FC00FCCD32 /* MapViewController.m */; };
+		3CD83F5A1A4C231800FCCD32 /* MyAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CD83F591A4C231800FCCD32 /* MyAnnotation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		3CD83F511A4BE25A00FCCD32 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3CD83F551A4BF3FC00FCCD32 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		3CD83F561A4BF3FC00FCCD32 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		3CD83F581A4C231800FCCD32 /* MyAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAnnotation.h; sourceTree = "<group>"; };
+		3CD83F591A4C231800FCCD32 /* MyAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyAnnotation.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +105,8 @@
 				3CD83F291A4BDD2100FCCD32 /* Supporting Files */,
 				3CD83F551A4BF3FC00FCCD32 /* MapViewController.h */,
 				3CD83F561A4BF3FC00FCCD32 /* MapViewController.m */,
+				3CD83F581A4C231800FCCD32 /* MyAnnotation.h */,
+				3CD83F591A4C231800FCCD32 /* MyAnnotation.m */,
 			);
 			path = Stalker;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				TargetAttributes = {
 					3CD83F251A4BDD2100FCCD32 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = EQ4VL6X5J7;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -192,6 +198,7 @@
 					};
 					3CD83F3E1A4BDD2100FCCD32 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = EQ4VL6X5J7;
 						TestTargetID = 3CD83F251A4BDD2100FCCD32;
 					};
 				};
@@ -241,6 +248,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3CD83F321A4BDD2100FCCD32 /* ViewController.m in Sources */,
+				3CD83F5A1A4C231800FCCD32 /* MyAnnotation.m in Sources */,
 				3CD83F2F1A4BDD2100FCCD32 /* AppDelegate.m in Sources */,
 				3CD83F2C1A4BDD2100FCCD32 /* main.m in Sources */,
 				3CD83F571A4BF3FC00FCCD32 /* MapViewController.m in Sources */,
@@ -387,6 +395,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -398,6 +408,7 @@
 				INFOPLIST_FILE = StalkerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stalker.app/Stalker";
 			};
 			name = Debug;
@@ -406,6 +417,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -413,6 +426,7 @@
 				INFOPLIST_FILE = StalkerTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stalker.app/Stalker";
 			};
 			name = Release;
