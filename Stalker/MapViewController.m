@@ -33,19 +33,8 @@
                                options:0
                                context:NULL];
     
-//    MKAnnotationView* aView = [[MKAnnotationView alloc] initWithAnnotation:annotation
-//                                                           reuseIdentifier:@"MyCustomAnnotation"];
-////    aView.image = [UIImage imageNamed:@"myimage.png"];
-//    aView.centerOffset = CGPointMake(10, -20);
     
-    _shopList = @[
-                      @{@"shopNo":@"001", @"shopName":@"イベントガーデン",  	@"ganre": @"バル",        @"lat":@"34.671140", @"lon":@"135.493251"}
-                      ,@{@"shopNo":@"002", @"shopName":@"卓球バー",      		@"ganre": @"バー",        @"lat":@"34.672503", @"lon":@"135.494903"}
-                      ];
     
-    CLLocationCoordinate2D location;
-    location.latitude = 34.67174;         // 経度
-    location.longitude = 135.496201;  // 緯度
     [_mapView setCenterCoordinate:location animated:NO];
     
     // 縮尺を指定
@@ -55,16 +44,7 @@
     region.span.longitudeDelta = 0.01;
     [self.mapView setRegion:region animated:NO];
     
-    for (NSDictionary* dic in self.shopList) {
-        // CustomAnnotationはMKAnnotationを継承したサブクラス。
-        // MKAnnotationだけでも使えるが制約が多いので自由なサブクラスをつくることをおすすめ。
-        CLLocationCoordinate2D coodinate = CLLocationCoordinate2DMake([dic[@"lat"] floatValue], [dic[@"lon"] floatValue]); // 緯度経度
-        MyAnnotation *pin = [[MyAnnotation alloc] initWithLocation:coodinate];
-        pin.title = dic[@"shopName"];//タイトル
-        pin.subtitle = dic[@"ganre"];//サブタイトル
-        
-        [_mapView addAnnotation:pin];
-    }
+    
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
@@ -82,7 +62,6 @@
     MKPinAnnotationView* pinView =
     (MKPinAnnotationView *)[mapView dequeueReusableAnnotationViewWithIdentifier:Identifier];
     
-    // 現在地表示なら nil を返す
     if (annotation == mapView.userLocation) {
         return nil;
     }
@@ -90,11 +69,11 @@
     if (!pinView) {
         pinView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation
                                                   reuseIdentifier:Identifier];
-        pinView.animatesDrop = YES;     // 落下アニメーションありなし
-        pinView.canShowCallout = YES;  // 吹き出し表示するか
-        pinView.draggable = YES;           // ドラッグできるか
+        pinView.animatesDrop = YES;
+        pinView.canShowCallout = YES;
+        pinView.draggable = YES;
         pinView.rightCalloutAccessoryView =
-        [UIButton buttonWithType:UIButtonTypeDetailDisclosure]; // 右側にアクセサリ
+        [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
     } else {
         pinView.annotation = annotation;
     }
@@ -107,19 +86,7 @@
     MyAnnotation* pin = (MyAnnotation*)annotationView.annotation;
     NSLog(@"title:%@",pin.title);
     
-    // タップしたときの処理
     
-}
-
-- (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
-    
-}
-
-- (void)locationManagerDidPauseLocationUpdates:(CLLocationManager *)manager {
-    // Pause
 }
 
 @end
