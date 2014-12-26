@@ -43,6 +43,7 @@
     _locationManager.distanceFilter = 1; // meters
     _locationManager.pausesLocationUpdatesAutomatically = YES;
     [_locationManager startUpdatingLocation];
+    [_locationManager requestAlwaysAuthorization];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
