@@ -27,7 +27,9 @@
     
     _mapView.frame = self.view.bounds;
     _mapView.mapType = MKMapTypeStandard;
-//    _mapView.showsUserLocation = YES;
+    _mapView.showsUserLocation = YES;
+    [_mapView setUserTrackingMode:MKUserTrackingModeFollow animated:YES];
+    
      [_mapView.userLocation addObserver:self
                             forKeyPath:@"location"
                                options:0
