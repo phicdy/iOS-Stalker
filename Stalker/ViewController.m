@@ -47,7 +47,19 @@
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray *)locations {
+    CLLocation* location = [locations lastObject];
+    NSLog(@"latitude %+.6f, longitude %+.6f\n",
+          location.coordinate.latitude,
+          location.coordinate.longitude);
+
+    NSMutableArray *locationList = [[[NSUserDefaults standardUserDefaults]objectForKey:@"locationList"] mutableCopy];
+    if (!locationList) {
+        locationList = [[NSMutableArray alloc]init];
+    }
+    [locationList addObject:@{@"lat":[NSNumber numberWithDouble:(double)location.coordinate.latitude],
+                            @"lon":[NSNumber numberWithDouble:(double)location.coordinate.longitude]}];
     
+    [[NSUserDefaults standardUserDefaults]setObject:locationList forKey:@"locationList"];
 }
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error {
