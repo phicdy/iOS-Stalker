@@ -36,6 +36,15 @@
                                context:NULL];
     
     
+    NSMutableArray *locationList = [[NSUserDefaults standardUserDefaults]objectForKey:@"locationList"];
+    for (NSDictionary* dic in locationList) {
+        CLLocationCoordinate2D coodinate = CLLocationCoordinate2DMake([dic[@"lat"] floatValue], [dic[@"lon"] floatValue]);
+        MyAnnotation *pin = [[MyAnnotation alloc] initWithLocation:coodinate];
+//        pin.title = dic[@"shopName"];
+//        pin.subtitle = dic[@"ganre"];
+        
+        [_mapView addAnnotation:pin];
+    }
     
     NSDictionary *lastLocation = [locationList lastObject];
     CLLocationCoordinate2D location = CLLocationCoordinate2DMake([lastLocation[@"lat"] floatValue], [lastLocation[@"lon"] floatValue]);
