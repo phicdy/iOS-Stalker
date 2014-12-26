@@ -24,6 +24,9 @@
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="163" y="385" width="74" height="30"/>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=regular" fixedFrame="YES">
+                                    <rect key="frame" x="363" y="385" width="74" height="30"/>
+                                </variation>
                                 <connections>
                                     <segue destination="mx8-lN-WAh" kind="show" id="oB2-Cr-DTo"/>
                                 </connections>
@@ -34,45 +37,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="534" y="71.25"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="uvS-pc-eaR">
             <objects>
                 <viewController id="mx8-lN-WAh" customClass="MapViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cfB-e5-6il"/>
-                        <viewControllerLayoutGuide type="bottom" id="fIs-IX-qrC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="6GC-Cr-DKI">
+                    <mapView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="g1y-ET-yyY">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="lMK-vY-xIS">
-                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="0.0" y="0.0" width="400" height="800"/>
-                                </variation>
-                            </mapView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <variation key="default">
-                            <mask key="subviews">
-                                <exclude reference="lMK-vY-xIS"/>
-                            </mask>
-                        </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
-                            <mask key="subviews">
-                                <include reference="lMK-vY-xIS"/>
-                            </mask>
-                        </variation>
-                    </view>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </mapView>
                     <connections>
-                        <outlet property="mapView" destination="lMK-vY-xIS" id="g1M-3k-CvA"/>
+                        <outlet property="mapView" destination="g1y-ET-yyY" id="n3S-wO-JL4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sMX-xn-o7T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="807" y="141"/>
+            <point key="canvasLocation" x="1248" y="55.5"/>
         </scene>
     </scenes>
 </document>
