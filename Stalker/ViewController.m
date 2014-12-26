@@ -41,6 +41,7 @@
     _locationManager.desiredAccuracy = kCLDistanceFilterNone;
     // Set a movement threshold for new events.
     _locationManager.distanceFilter = 1; // meters
+    _locationManager.pausesLocationUpdatesAutomatically = YES;
     [_locationManager startUpdatingLocation];
 }
 
